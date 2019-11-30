@@ -3,9 +3,36 @@
     <head>
         <meta charset="utf-8">
         <title>Гра "Баше" - Сайт Юри Івацка</title>
+		
+		<style>
+			.box {
+				opacity: 0;
+			}
+			label {
+				display: inline-block;
+				width: 110px;
+				height: 110px;
+				background-image: url("box.gif");
+				
+			}
+			.box:checked + .box-label{
+				background-image: url("coint1.jpg");
+				background-size: 100%;
+			}
+			.box:checked + .bomb{
+				background-image: url("bomb.gif");
+			}
+		</style>
 	</head>
 	<body style="text-align: center;">
 		<h1><i>Гра "Баше"</i></h1>
-		<input type="checkbox" checked>	
+		<input type="checkbox" id="p_1" class="box">
+		<label for="p_1" class="box-label"></label>
+		
+		<input type="checkbox" id="p_2" class="box">
+		<label for="p_2" class="box-label"></label>
+		
+		<input type="checkbox" id="p_21" class="box">
+		<label for="p_21" class="box-label bomb"></label>
 	</body>
 </html>
